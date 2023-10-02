@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookappointment</title>
+</head>
+<header>
+    <center><img src="1.png" style="margin-top:0px; margin-left:10px;width:200px;height:30px"></center> 
+</header>
+<style>
+ header{
+      background-color: white;
+      width:100%;
+      height:30px;
+      margin-bottom: 10px;
+   }
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  height:80px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+body{
+background-image: url("blood111.jpg");
+background-size: cover;
+}
+.whitediv
+{
+height:850px;
+width: 500px;
+background-color: transparent;
+color:white;
+margin-left: 390px;
+margin-top: 1%;
+border-radius:0px;
+opacity: 0.8;
+box-shadow:0 0 25px black;
+}
+        
+.lab
+{
+color:rgb(236, 236, 241);
+font-size:40px;
+}
+        
+.lab2
+{
+color:rgb(247, 239, 239);
+font-size : 18px;
+margin-left: 30px;
+}
+    
+.textbox
+{
+background-color: transparent;
+font-size : 18px;
+color:white;
+width: 400px;
+height: 35px;
+margin-left: 70px; 
+}
+
+.butttonclass
+{
+height: 40px;
+width: 200px;
+font-size : 18px;
+color:white;
+background-color:rgb(121, 109, 230);
+border : none; color : white;
+}
+    
+.butttonclass:hover
+{
+background-color : rgb(150, 245, 7);
+color:black;
+}
+</style>
+<body>
+    <ul>
+        <li><img src="lo.jpg" style="margin-top:10px; margin-left: 10px;width:80px;height:80px"></li>
+        <li><a></a></li>
+        <li><a style="margin-top: 10px" href="@{homepage}"> Home </a></li>
+        <li><a style="margin-top: 10px" th:href="@{/lifesaver/bloodhompage}"> Blood Donation</a></li>
+        <li><a style="margin-top: 10px" th:href="@{/lifesaver/organregistration}"> Organ Donation</a></li>
+        <li><a  style="margin-top: 10px" th:href="@{/lifesaver/bookappointment}"> Book Appointment </a></li>
+        <li><a  style="margin-top: 10px" th:href="@{/lifesaver/viewappointment}"> View Appointment </a></li>
+        <li style="float: right;"><a th:href="@{/lifesaver/login}"> <img src="login.jpg" style="height: 50px; width: 50px;"></a></li>
+        <li style="float: right;"><a th:href="@{/lifesaver/register}"><img src="registericon.png" style="height: 50px; width: 50px"></a></li>
+      </ul>
+    <form action="D:\lifesaver\homepage.html">
+        <div class="whitediv">
+            <br>
+            <center><label class="lab"><b>LIFE SAVER</b></label>
+            <br>
+            <label class="lab">Book And Meet A Doctor </label></center>
+            <br>
+            <br>
+            <br>
+            <label class="lab2"><b>Full Name</b> </label>
+            <br>
+            <input type="text" class="textbox" name="name" required>
+            <br><br>
+            <label class="lab2"><b>Email_id</b></label>
+            <br>
+            <input type="email" class="textbox" name="email" required>
+            <br><br>
+            <label class="lab2"><b>Contact</b></label>
+            <br>
+            <input type="text" class="textbox" name="contact"required>
+            <br><br>
+            <label class="lab2"><b>Date</b> </label>
+            <br>
+            <input type="date" class="textbox" name="date" required>
+            <br>
+            <br>
+            <label class="lab2"><b>Time</b></label>
+            <br>
+            <input type="time" class="textbox" name="time" required>
+            <br>
+            <br>
+            <label class="lab2"><b> Find Doctors</b></label>
+            <br>
+            <input type="text" class="textbox" placeholder="State" name="state" required>
+            <br>
+            <br>
+            <input type="text" class="textbox" placeholder="City" name="city" required>
+            <br><br>
+            <input type="text" class="textbox" placeholder="search Doctors" name="searchdoctor" required>
+            <br><br><br>
+            <center><button class="butttonclass">Book Appointment</button></center>
+        </div>
+    </form>   
+</body>
+</html>

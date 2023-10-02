@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bloodregistration</title>
+<header>
+    <center><img src="1.png" style="margin-top:0px; margin-left:10px;width:200px;height:30px"></center> 
+
+</header>
+</head>
+<style>
+ header{
+      background-color: white;
+      width:100%;
+      height:30px;
+      margin-bottom: 10px;
+   }
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  height:80px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+    .textbox
+    {
+    height:25px;
+    width:300px;
+    background-color:white;
+    font-size:15px;
+    margin-left:20px;
+    }
+    .main{
+        height:520px;
+        width:980px;
+        margin-left:12px;
+        background-color:#A8DDA8;
+box-shadow: 0 0 4px 0 white ;    }
+    .main1{
+        display:flex;
+        box-shadow:0 0 20px 2px black; 
+        height:500px;
+        width:600px;
+        font-size:small;
+        background-color: #F1EFEF;
+    }
+    .right{
+        padding:20px;
+
+    }
+    .left{
+padding:20px;
+
+    }
+    .select{
+        margin-left:10px;
+    }
+    .button{
+        background-color:hwb(240 20% 21%);
+        font-size:15px;
+        margin-right:110px;
+        height:40px;
+        width:230px;
+        text-align-last: center;
+    }
+    .button:hover{
+        background-color:hwb(33 9% 13%);
+        font-size:15px;
+        color:beige;
+        margin-right:110px;
+        height:40px;
+        width:230px;
+        text-align-last: center;
+
+    }
+    .a1{
+        font-size:14px;
+        padding-left: 40px;
+    } 
+    .facts
+{
+width: 250px;
+height:70px;
+background-color: #b0211c;
+border-radius: 8px;
+color:white;
+font-size:large;
+}
+.top1
+{
+background-color:#f7f5f5;
+height:100px;
+width:980px; 
+margin-left: 140px;  
+}
+body{
+    background-image: url("blood111.jpg");
+    background-size: cover;
+}
+
+.facts1
+{
+margin-left:150px;
+margin-top:-110px;
+} 
+</style>
+<body>
+    <form th:action="@{/lifesaver/addform}" th:object="${BloodRegistration}" method="post">
+    <ul>
+        <li><img src="lo.jpg" style="margin-top:10px; margin-left: 10px;width:80px;height:80px"></li>
+        <li><a></a></li>
+        <li><a style="margin-top: 10px" href="@{homepage}"> Home </a></li>
+        <li><a style="margin-top: 10px" th:href="@{/lifesaver/bloodhompage}"> Blood Donation</a></li>
+        <li><a style="margin-top: 10px" th:href="@{/lifesaver/organregistration}"> Organ Donation</a></li>
+        <li><a  style="margin-top: 10px" th:href="@{/lifesaver/bookappointment}"> Book Appointment </a></li>
+        <li><a  style="margin-top: 10px" th:href="@{/lifesaver/viewappointment}"> View Appointment </a></li>
+        <li style="float: right;"><a th:href="@{/lifesaver/login}"> <img src="login.jpg" style="height: 50px; width: 50px;"></a></li>
+        <li style="float: right;"><a th:href="@{/lifesaver/register}"><img src="registericon.png" style="height: 50px; width: 50px"></a></li>
+      </ul>
+    <div class="top1">
+        <div class="img">
+           <img src="images/blood1.jpeg" style="margin-left: 10px" width="100" height="90">
+        </div>
+        <div class="facts1">
+           <a href="@{/lifesaver/bloodregistration}">
+              <input style="margin-left: 10px; margin-top: 20px" class="facts"type="submit" value="CLICK HERE TO REGISTER" >
+             </a>
+            <a href="@{/lifesaver/blooddonationfacts}">
+              <input style="margin-left: 10px; margin-top:30px" class="facts"type="submit" value="BLOOD DONATION FACTS" >
+            </a>
+            <a href="@{/lifesaver/canandcant}">
+              <input  style="margin-left: 10px; margin-top:30px" class="facts"type="submit" value="WHO CAN/CAN'T DONATE">
+            </a>
+        </div>
+    </div>
+
+   <center> <div class="main">
+       <div class="main1">
+           <div class="left">
+            <label class="a1"><b>Full Name:</b></label><br><br><br>
+            <label class="a1"><b>Blood Group:</b></label><br><br><br>
+            <label class="a1"><b>Mobile Number:</b></label><br><br><br>
+            <label class="a1"><b>Enter Country:</b></label><br><br><br>
+            <label class="a1"><b>Enter State:</b></label><br><br><br>
+            <label class="a1"><b>Enter District:</b></label><br><br><br>
+            <label class="a1"><b>Enter City:</b></label><br><br><br>
+            <label class="a1"><b>Email-Id:</b></label><br><br><br>
+            <label class="a1"><b>Please confirm your availability to donate blood:</b></label>
+           </div>
+         <div class="right">
+            <input type="text" th:field="*{name}"class="textbox" name="name" placeholder="Full Name" ><br><br>
+            <select name="bloodgroup" th:field="*{bloodgroup}"class="textbox" name="bloodgroup" required>
+            <option value="Select"> Select</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="A1+">A1+</option>
+            <option value="A1-">A1-</option>
+            <option value="A1B+">A1B+</option>
+            <option value="A1B-">A1B-</option>
+            <option value="A2+">A2+</option>
+            <option value="A2-">A2-</option>
+            <option value="A2B+">A2B+</option>
+            <option value="A2B-">A2B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="Bombay Blood Group">Bombay Blood Group</option>
+            <option value="INRA">INRA</option>
+            <option value="o+">O+</option>
+            <option value="o-">o-</option>
+            </select><br><br>       
+            <input type="text "th:field="*{number}" class="textbox" name="number" placeholder= " Enter mobile number" required><br>   
+            </br>
+            <input type="text "th:field="*{country}" class="textbox" name="country" placeholder= " Enter country" required><br>  
+            </br>
+            <input type="text " th:field="*{state}"class="textbox" name="state" placeholder= " Enter state" required><br>   
+            </br>
+            <input type="text " th:field="*{district}"class="textbox" name="district" placeholder= " Enter district"required ><br>  
+            </br>
+            <input type="text "th:field="*{city}" class="textbox" name="city" placeholder= "Enter city" required><br>   
+            </br>       
+            <input type="Email-Id" th:field="*{email}"class="textbox" name="email" placeholder="Enter email_id "required><br>  
+            <br>        
+             <input type="text"th:field="*{availability}" class="textbox" name="availability" placeholder="Available/Unavailable"required><br><br><br>
+            <div class="button">
+                <input type="submit" class="button" name="submit" value="Submit">
+            </div>
+           </div>
+        </div>
+    </div></center>
+</form>
+</body>
+</html>

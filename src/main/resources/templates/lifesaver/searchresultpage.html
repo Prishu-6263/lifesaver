@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchresultpage</title>
+<header>
+    <center><img src="1.png" style="margin-top:0px; margin-left:10px;width:200px;height:30px"></center> 
+
+</header>
+</head>
+<style>
+     header{
+      background-color: white;
+      width:100%;
+      height:30px;
+      margin-bottom: 10px;
+   }
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  height:80px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+h1
+{
+background-color:bisque;  
+}
+
+.left
+{
+color:black;
+padding-left: 20px;
+padding-top: 18px;
+text-align:justify;
+}
+
+.right
+{
+padding-top:15px;
+padding-right: 30px;
+}
+
+.top
+{
+margin-top: 150px;
+background-color:#2cb7e6;
+color:white;
+height:30px;
+width:390px; 
+margin-left: 40px;
+padding-top:5px;
+box-shadow :0  0 5px 0px #2cb7e6;
+}
+
+.center
+{
+background-color: white;
+height:600px;
+width:980px;
+margin-top: -150px;
+margin-left:10px;
+}
+
+.a
+{
+background-color: aqua;
+}
+   
+body
+{
+background-image: url("blood111.jpg");
+background-size: cover;
+}
+    
+.main
+{
+display: flex;
+margin-left: 40px;
+height:fit-content;
+width:fit-content;
+box-shadow :0  0 5px 0px #2cb7e6;
+}
+
+.button
+{
+margin-left: 80px;
+margin-top:30px;
+color:white;
+height:30px;
+width:110px;
+background-color: #f7a894;
+transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.button:hover
+{
+background-color:#eb1409;
+}
+
+.text
+{
+width:140px;
+}
+
+.top1
+{
+background-color: #f7f5f5;
+height:100px;
+width:980px; 
+margin-left: 140px;  
+}
+
+.facts1
+{
+margin-left:150px;
+margin-top:-110px;
+}
+
+.facts
+{
+width: 250px;
+height:70px;
+background-color: #b0211c;
+border-radius: 8px;
+color:white;
+font-size:large;
+}
+
+th
+{
+border-color:black;
+border-width:thin;
+height:50px;
+width:300px;
+background-color: darkgrey;
+
+}
+  
+td
+{
+border-width:thin;
+height:50px;
+width:300px;
+background-color: rgb(232, 226, 226);
+text-align: center;
+}
+
+.head
+{
+border-color:black;
+border-width:thin;
+height:50px;
+width:400px;
+background-color: darkgrey;
+}
+   
+</style>
+
+<body>
+    <ul>
+        <li><img src="lo.jpg" style="margin-top:10px; margin-left: 10px;width:80px;height:80px"></li>
+        <li><a></a></li>
+        <li><a style="margin-top: 10px" href="D:\lifesaver\homepage.html"> Home </a></li>
+        <li><a style="margin-top: 10px" href="D:\lifesaver\bloodhomepage.html"> Blood Donation</a></li>
+        <li><a style="margin-top: 10px" href="D:\lifesaver\organregistration.html"> Organ Donation</a></li>
+        <li><a  style="margin-top: 10px" href="D:\lifesaver\bookappointment.html"> Book Appointment </a></li>
+        <li><a  style="margin-top: 10px" href="D:\lifesaver\viewappointment.html"> View Appointment </a></li>
+        <li style="float: right;"><a href="D:\lifesaver\login.html"> <img src="login.jpg" style="height: 50px; width: 50px;"></a></li>
+        <li style="float: right;"><a href="D:\lifesaver\register.html"><img src="registericon.png" style="height: 50px; width: 50px"></a></li>
+      </ul>
+   <div class="top1">
+        <div class="img">
+           <img src="D:\lifesaver\blood1.jpeg" style="margin-left: 10px" width="100" height="90">
+        </div>
+        <div class="facts1">
+            <a href="D:\lifesaver\bloodregistration.html">
+                <input style="margin-left: 10px; margin-top: 20px" class="facts"type="submit" value="CLICK HERE TO REGISTER" >
+            </a>
+            <a href="D:\lifesaver\blooddonationfacts.html">
+                <input style="margin-left: 10px; margin-top:30px" class="facts"type="submit" value="BLOOD DONATION FACTS" >
+            </a>
+            <a href="D:\lifesaver\canandcant.html">
+               <input  style="margin-left: 10px; margin-top:30px" class="facts"type="submit" value="WHO CAN/CAN'T DONATE">
+            </a>
+        </div>
+    </div>
+    <center><div class="center">
+                <div class="top">
+                    <center><label>SEARCH FOR BLOOD DONER</label></center>
+                </div>
+                <div class="main">
+                    <div class="left">
+                        <label>Blood Group</label><br><br>
+                        <label>Select Country</label><br><br>
+                        <label>Select State</label><br><br>
+                        <label>Select District</label><br><br>
+                        <label>Select City</label><br><br>
+                        <center><input class="button" type="submit" value="Search"></center>
+                    </div>
+                    <div class="right">
+                        <select name="bloodgroup">
+                            <option value="Select">-----Select-----</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="A1+">A1+</option>
+                            <option value="A1-">A1-</option>
+                            <option value="A1B+">A1B+</option>
+                            <option value="A1B-">A1B-</option>
+                            <option value="A2+">A2+</option>
+                            <option value="A2-">A2-</option>
+                            <option value="A2B+">A2B+</option>
+                            <option value="A2B-">A2B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="A+">A+</option>
+                            <option value="Bombay Blood Group">Bombay Blood Group</option>
+                            <option value="INRA">INRA</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select><br><br>
+                        <input  class="text" type="text"  placeholder="enter country"><br><br>
+                        <input class="text" type="text"  placeholder="enter State"><br><br>
+                        <input class="text" type="text"  placeholder="enter District"><br><br>
+                        <input class="text" type="text"  placeholder="enter City"><br><br>
+                    </div>
+                </div><br><br><br><br><br>
+                <div class="bottom">
+                    <table>
+                        <tr th:each="book:${lifeSaver">
+                           <th class="head">Name</th>
+                           <th>Available/unavailable</th>
+                           <th>Mobile No.</th>
+                        </tr><br>
+                        <tr>
+                           <td th:text="${BloodRegistration.name}"></td>
+                           <td th:text="${BloodRegistration.availability}"></td> 
+                           <td th:text="${BloodRegistration.number}"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div></center>
+</body>
+</html>
